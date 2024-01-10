@@ -11,16 +11,44 @@ namespace ProjectLibrary.Shapes
     {
         public static void ShowShapesMenu()
         {
+            Console.Clear();
+            bool isShapesMenu = true;
             Console.WriteLine("Regler för Shapes");
             Console.WriteLine("====================================");
             Console.WriteLine("Du väljer en av fyra former som kommer visas inom kort." +
                 "\nSedan ska du ange ett antal faktorer som ska hjälpa dig att" +
-                "\nräkna ut Omkrets och Area på den valda formen.");
-            while (true)
+                "\nräkna ut Omkrets och Area på den valda formen." +
+                "\n\nTryck på enter för att fortsätta...");
+            Console.ReadKey();
+            Console.Clear();
+
+
+            while (isShapesMenu)
             {
                 switch (DisplayMenus.DisplayShapesMenu())
                 {
-
+                    case "1":
+                        //Rektangel
+                        break;
+                    case "2":
+                        //Parallellogram
+                        break;
+                    case "3":
+                        //Triangel
+                        break;
+                    case "4":
+                        //Romb
+                        break;
+                    case "0":
+                        Console.Clear();
+                        isShapesMenu = false;
+                        break;
+                    default:
+                        Console.WriteLine("Du måste ange ett av valen ovan!!");
+                        Console.WriteLine("Tryck på enter för att fortsätta...");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
                 }
             }
         }

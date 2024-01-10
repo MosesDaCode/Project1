@@ -26,8 +26,19 @@ namespace ProjectLibrary
 
         public static string DisplayShapesMenu()
         {
-            string hej = null;
-            return hej;
+            Console.WriteLine("==================================");
+            Console.WriteLine("Välj en form att räkna!");
+            Console.WriteLine("..................................");
+            Console.WriteLine("1. Rektangel");
+            Console.WriteLine("2. Parallellogram");
+            Console.WriteLine("3. Triangel");
+            Console.WriteLine("3. Romb");
+            Console.WriteLine("0. Gå tillbaka");
+            Console.WriteLine("==================================");
+            Console.Write("Val: ");
+
+            var shapesChoice = Console.ReadLine();
+            return shapesChoice;
         }
     }
 }
