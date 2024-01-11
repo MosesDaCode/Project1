@@ -25,7 +25,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                     {
                         Console.WriteLine($"Form: {shape.ShapeForm}" +
                             $"\nBas: {shape.Base} cm" +
-                            $"\nLängd: {shape.Height} cm" +
+                            $"\nHöjd: {shape.Height} cm" +
                             $"\nKatet 1: {shape.CathetusOne} cm" +
                             $"\nKatet 2: {shape.CathetusTwo} cm" +
                             $"\nHypotenusa: {shape.Hypotenuse} cm" +

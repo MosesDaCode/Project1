@@ -63,7 +63,7 @@ namespace ProjectLibrary
             Console.WriteLine("..................................");
             Console.WriteLine("1. Se alla resultat");
             Console.WriteLine("2. Se Rektangel resultat");
-            Console.WriteLine("3. se parallellogram resultat");
+            Console.WriteLine("3. se Parallellogram resultat");
             Console.WriteLine("4. Se Triangel resultat");
             Console.WriteLine("5. Se Romb resultat");
             Console.WriteLine("0. Gå tillbaka");

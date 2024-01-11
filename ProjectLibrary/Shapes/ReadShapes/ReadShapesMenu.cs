@@ -29,13 +29,22 @@ namespace ProjectLibrary.Shapes.ReadShapes
                         Console.Clear();
                         break;
                     case "3":
-                        //Se Parallellogram
+                        ReadParallelogram.ReadingParallelogram();
+                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "4":
                         //Se Triangel
+                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "5":
                         //Se Romb
+                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "0":
                         Console.Clear();

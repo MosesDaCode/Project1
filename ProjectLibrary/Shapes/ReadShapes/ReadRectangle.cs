@@ -27,7 +27,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                     {
                         Console.WriteLine($"Form: {rec.ShapeForm}" +
                             $"\nBas: {rec.Base} cm" +
-                            $"\nLängd: {rec.Height} cm" +
+                            $"\nHöjd: {rec.Height} cm" +
                             $"\nOmkrets: {rec.Circumference} cm" +
                             $"\nArea: {rec.Area:F2} cm²" +
                             $"\nUträknad: {rec.Date}");
