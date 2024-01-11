@@ -35,7 +35,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                         Console.Clear();
                         break;
                     case "4":
-                        //Se Triangel
+                        ReadTriangle.ReadingTriangle();
                         Console.WriteLine("\nTryck på enter för att gå tillbaka...");
                         Console.ReadKey();
                         Console.Clear();
