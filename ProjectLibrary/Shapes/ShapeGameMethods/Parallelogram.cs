@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectLibrary.Shapes
+namespace ProjectLibrary.Shapes.ShapeGameMethods
 {
     public class Parallelogram
     {
@@ -27,7 +27,7 @@ namespace ProjectLibrary.Shapes
                 do
                 {
                     Console.Write("\n\nAnge Basen för Parallellogramet: ");
-                    if (!double.TryParse(Console.ReadLine(),out parBase))
+                    if (!double.TryParse(Console.ReadLine(), out parBase))
                     {
                         Console.WriteLine("\nDu måste ange ett nummer för basen av Parallellogramet!");
                     }
@@ -45,7 +45,7 @@ namespace ProjectLibrary.Shapes
 
                 do
                 {
-                    
+
                     Console.Write("Ange nu höjden för Parallellogramet: ");
                     if (!double.TryParse(Console.ReadLine(), out parHeight))
                     {
@@ -67,7 +67,7 @@ namespace ProjectLibrary.Shapes
                 {
                     Console.WriteLine("\n\nBra Jobbat!!!");
                     Console.Write("Ange nu hypotenusan för Parallellogramet: ");
-                    if (!double.TryParse (Console.ReadLine(), out parHypo))
+                    if (!double.TryParse(Console.ReadLine(), out parHypo))
                     {
                         Console.WriteLine("\nDu måste ange ett nummer för hypotenusan av Parallellogramet!");
                     }
@@ -88,7 +88,7 @@ namespace ProjectLibrary.Shapes
                 Console.WriteLine($"Hypotenusa: {parHypo:F2} cm");
 
                 var parArea = parBase * parHeight;
-                var parCircumference = (parBase * 2) + (parHypo * 2);
+                var parCircumference = parBase * 2 + parHypo * 2;
 
                 var newPar = new ShapeGame()
                 {

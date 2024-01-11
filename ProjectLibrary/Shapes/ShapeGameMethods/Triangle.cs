@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectLibrary.Shapes
+namespace ProjectLibrary.Shapes.ShapeGameMethods
 {
     public class Triangle
     {
@@ -107,7 +107,7 @@ namespace ProjectLibrary.Shapes
                 Console.WriteLine($"Katet 1: {triCatOne:F2} cm");
                 Console.WriteLine($"Katet 2: {triCatTwo:F2} cm");
 
-                var triArea = (triBase * triHeight) / 2;
+                var triArea = triBase * triHeight / 2;
                 var triCircumference = triBase + triCatOne + triCatTwo;
 
                 var newTriangle = new ShapeGame()

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectLibrary.Shapes
+namespace ProjectLibrary.Shapes.ShapeGameMethods
 {
     public class Rectangle
     {
@@ -29,7 +29,7 @@ namespace ProjectLibrary.Shapes
                     {
                         Console.WriteLine("\nDu måste ange ett nummer för basen av rektangeln!");
                     }
-                    else if(recBase == 0)
+                    else if (recBase == 0)
                     {
                         Console.Clear();
                         return;
@@ -57,15 +57,15 @@ namespace ProjectLibrary.Shapes
                     {
                         break;
                     }
-                }while (true);
+                } while (true);
 
                 Console.WriteLine("\nDu har angett");
                 Console.WriteLine($"Bas: {recBase:F2} cm");
                 Console.WriteLine($"Höjd: {recHeight:F2} cm");
 
                 var recArea = recBase * recHeight;
-                var recCircumference = (recBase * 2) + (recHeight * 2);
-                
+                var recCircumference = recBase * 2 + recHeight * 2;
+
                 var newRec = new ShapeGame()
                 {
                     ShapeForm = "Rektangel",

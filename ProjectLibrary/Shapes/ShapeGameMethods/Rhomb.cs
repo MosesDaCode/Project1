@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectLibrary.Shapes
+namespace ProjectLibrary.Shapes.ShapeGameMethods
 {
     public class Rhomb
     {
@@ -17,7 +17,7 @@ namespace ProjectLibrary.Shapes
                 DateOnly todaysDate = DateOnly.FromDateTime(DateTime.Now);
                 double rombBase;
                 double rombHeight;
-                
+
                 Console.WriteLine("Du har valt Romb!" +
                     "\nFör att räkna ut area och omkrest för Romben" +
                     "\nså behöver vi basen och höjden i cm.");
@@ -57,7 +57,7 @@ namespace ProjectLibrary.Shapes
                     }
                     else
                     {
-                        
+
                         break;
                     }
                 } while (true);

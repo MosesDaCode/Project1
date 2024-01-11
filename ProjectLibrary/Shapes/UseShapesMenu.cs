@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectLibrary.Shapes.ReadShapes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace ProjectLibrary.Shapes
                         StartShapeGame.StartShaping();
                         break;
                     case "2":
-                        //Se resultat
+                        ReadShapesMenu.ReadingShapesMenu();
                         break;
                     case "3":
                         //Ändra resultat 
@@ -44,10 +45,9 @@ namespace ProjectLibrary.Shapes
                         isShapesMenu = false;
                         break;
                     default:
-                        Console.WriteLine("Du måste ange ett av valen ovan!!");
-                        Console.WriteLine("Tryck på enter för att fortsätta...");
-                        Console.ReadKey();
-                        Console.Clear();
+                        
+
+
                         break;
                 }
             }
