@@ -11,14 +11,14 @@ namespace ProjectLibrary.Build.Data
         public string ShapeForm { get; set; } = string.Empty;
 
         [Required]
-        public int Base {  get; set; } 
+        public double Base {  get; set; } 
 
         [Required]
-        public int Height { get; set; }
+        public double Height { get; set; }
 
-        public int CathetusOne { get; set; }
-        public int CathetusTwo { get; set; }
-        public int Hypotenuse {  get; set; }
+        public double CathetusOne { get; set; }
+        public double CathetusTwo { get; set; }
+        public double Hypotenuse {  get; set; }
 
         [Required]
         public double Area { get; set; }

@@ -17,16 +17,28 @@ namespace ProjectLibrary.Shapes
                 switch (DisplayMenus.DisplayShapesMenu())
                 {
                     case "1":
-                        //Rektangel
+                        Rectangle.RectangleChoice();
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "2":
-                        //Parallellogram
+                        Parallelogram.ParallelogramChoice();
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "3":
                         //Triangel
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "4":
                         //Romb
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "0":
                         Console.Clear();
