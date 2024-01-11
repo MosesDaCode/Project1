@@ -32,7 +32,7 @@ namespace ProjectLibrary
             Console.WriteLine("1. Rektangel");
             Console.WriteLine("2. Parallellogram");
             Console.WriteLine("3. Triangel");
-            Console.WriteLine("3. Romb");
+            Console.WriteLine("4. Romb");
             Console.WriteLine("0. Gå tillbaka");
             Console.WriteLine("==================================");
             Console.Write("Val: ");

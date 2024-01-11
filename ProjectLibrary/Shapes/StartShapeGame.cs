@@ -29,13 +29,13 @@ namespace ProjectLibrary.Shapes
                         Console.Clear();
                         break;
                     case "3":
-                        //Triangel
+                        Triangle.TriangleChoice();
                         Console.WriteLine("\nTryck på enter för att fortsätta...");
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case "4":
-                        //Romb
+                        Rhomb.RhombChoice();
                         Console.WriteLine("\nTryck på enter för att fortsätta...");
                         Console.ReadKey();
                         Console.Clear();
