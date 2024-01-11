@@ -41,7 +41,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                         Console.Clear();
                         break;
                     case "5":
-                        //Se Romb
+                        ReadRhomb.ReadingRhomb();
                         Console.WriteLine("\nTryck på enter för att gå tillbaka...");
                         Console.ReadKey();
                         Console.Clear();
