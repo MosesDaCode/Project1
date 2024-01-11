@@ -40,5 +40,21 @@ namespace ProjectLibrary
             var shapesChoice = Console.ReadLine();
             return shapesChoice;
         }
+        public static string DisplayShapesCrud()
+        {
+            Console.WriteLine("==================================");
+            Console.WriteLine("Välj en form att räkna!");
+            Console.WriteLine("..................................");
+            Console.WriteLine("1. Starta Spelet");
+            Console.WriteLine("2. Se Resultat");
+            Console.WriteLine("3. Ändra resultat");
+            Console.WriteLine("3. Ta bort resultat");
+            Console.WriteLine("0. Gå tillbaka");
+            Console.WriteLine("==================================");
+            Console.Write("Val: ");
+
+            var shapesCrudChoice = Console.ReadLine();
+            return shapesCrudChoice;
+        }
     }
 }

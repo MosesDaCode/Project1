@@ -3,41 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
 
 namespace ProjectLibrary.Shapes
 {
-    public class UseShapesMenu
+    public class StartShapeGame
     {
-        public static void ShowShapesMenu()
+        public static void StartShaping()
         {
             Console.Clear();
             bool isShapesMenu = true;
-            Console.WriteLine("Regler för Shapes");
-            Console.WriteLine("====================================");
-            Console.WriteLine("Du väljer en av fyra former som kommer visas inom kort." +
-                "\nSedan ska du ange ett antal faktorer som ska hjälpa dig att" +
-                "\nräkna ut Omkrets och Area på den valda formen." +
-                "\n\nTryck på enter för att fortsätta...");
-            Console.ReadKey();
-            Console.Clear();
-
-
             while (isShapesMenu)
             {
-                switch (DisplayMenus.DisplayShapesCrud())
+                switch (DisplayMenus.DisplayShapesMenu())
                 {
                     case "1":
-                        StartShapeGame.StartShaping();
+                        //Rektangel
                         break;
                     case "2":
-                        //Se resultat
+                        //Parallellogram
                         break;
                     case "3":
-                        //Ändra resultat 
+                        //Triangel
                         break;
                     case "4":
-                        //ta bort resultat
+                        //Romb
                         break;
                     case "0":
                         Console.Clear();
