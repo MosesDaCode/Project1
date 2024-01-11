@@ -20,7 +20,7 @@ namespace ProjectLibrary.Shapes
                 double parHypo;
                 Console.WriteLine("Du har valt Parallellogram!" +
                     "\nFör att räkna ut area och omkrest för Parallollogram" +
-                    "\nså behöver vi basen och höjden  i cm.");
+                    "\nså behöver vi basen och höjden i cm.");
                 Console.WriteLine("Area för Parallollogram räknas: Bas * Höjd" +
                     "\nOmkretsen för Parallellogram räknas: (bas * 2) + (hypotenusa * 2)");
 

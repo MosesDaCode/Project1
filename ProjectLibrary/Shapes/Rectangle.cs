@@ -19,7 +19,7 @@ namespace ProjectLibrary.Shapes
                 double recHeight;
                 Console.WriteLine("Du har valt Rektangel!" +
                     "\nFör att räkna ut area och omkrest för Rektangeln" +
-                    "\nså behöver vi basen och höjden  i cm.");
+                    "\nså behöver vi basen och höjden i cm.");
                 Console.WriteLine("Area för Rektangeln räknas: Bas * Höjd" +
                     "\nOmkretsen för Rektangeln räknas: (bas * 2) + (höjd * 2)");
                 do
@@ -80,7 +80,6 @@ namespace ProjectLibrary.Shapes
                 Console.WriteLine($"\nBra jobbat du har skapat en rektangel med" +
                     $"\nArea: {recArea:F2} cm²" +
                     $"\nOmkrets: {recCircumference:F2} cm");
-                Console.WriteLine("\nTryck på enter för att fortsätta...");
             }
         }
     }
