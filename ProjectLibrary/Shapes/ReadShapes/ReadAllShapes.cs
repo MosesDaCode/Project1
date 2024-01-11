@@ -12,8 +12,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
         public static void ReadingAllShapes()
         {
             Console.Clear();
-            Console.WriteLine("Visar alla resultat..." +
-                "\n-------------------------------------------");
+            
             using (var dbAllShapesRead = new Project1Dbcontext())
             {
                 var shapeResults = dbAllShapesRead.Shapes.ToList();
@@ -31,7 +30,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                             $"\nKatet 2: {shape.CathetusTwo} cm" +
                             $"\nHypotenusa: {shape.Hypotenuse} cm" +
                             $"\nOmkrets: {shape.Circumference} cm" +
-                            $"\nArea: {shape.Area} cm²" +
+                            $"\nArea: {shape.Area:F2} cm²" +
                             $"\nUträknad: {shape.Date}");
                         Console.WriteLine("-------------------------------------------");
                     }

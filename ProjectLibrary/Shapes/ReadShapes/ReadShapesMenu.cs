@@ -23,7 +23,10 @@ namespace ProjectLibrary.Shapes.ReadShapes
                         Console.Clear();
                         break;
                     case "2":
-                        //Se rektangel
+                        ReadRectangle.ReadingRectangle();
+                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "3":
                         //Se Parallellogram
