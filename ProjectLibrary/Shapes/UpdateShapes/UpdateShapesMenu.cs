@@ -36,7 +36,7 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                         Console.Clear();
                         break;
                     case "4":
-                        //ändra romb
+                        UpdateRhomb.EditRhomb();
                         Console.WriteLine("\nTryck på enter för att gå tillbaka...");
                         Console.ReadKey();
                         Console.Clear();
