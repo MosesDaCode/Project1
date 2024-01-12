@@ -23,7 +23,10 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                         Console.Clear();
                         break;
                     case "2":
-                        //ändra parallellogram
+                        UpdateParallelogram.EditParallelogram();
+                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "3":
                         //Ändra triangel

@@ -63,7 +63,7 @@ namespace ProjectLibrary.Shapes.UpdateShapes
 
                 do
                 {
-                    Console.Write("\nAnge en ny bas för Rektangeln: ");
+                    Console.Write("\nAnge en ny Bas för Rektangeln: ");
                     if (!double.TryParse(Console.ReadLine(), out newRecBase))
                     {
                         Console.WriteLine("\nDu måste ange en ny bas i form av siffror!");
@@ -82,7 +82,7 @@ namespace ProjectLibrary.Shapes.UpdateShapes
 
                 do
                 {
-                    Console.Write("Ange en ny höjd för Rektangeln: ");
+                    Console.Write("Ange en ny Höjd för Rektangeln: ");
                     if (!double.TryParse(Console.ReadLine(), out newRecHeight))
                     {
                         Console.WriteLine("\nDu måste ange en ny höjd i form av siffror!");
@@ -117,7 +117,7 @@ namespace ProjectLibrary.Shapes.UpdateShapes
 
 
                 Console.WriteLine($"\n\nNy uträknad Omkrets: {newRecCircumference} cm" +
-                    $"\nNy uträknad Ny uträknad Area: {newRecArea} cm²");
+                    $"\nNy uträknad Area: {newRecArea} cm²");
             }
         }
     }
