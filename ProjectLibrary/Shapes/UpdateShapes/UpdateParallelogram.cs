@@ -16,7 +16,8 @@ namespace ProjectLibrary.Shapes.UpdateShapes
 
             using (var dbEditPar = new Project1Dbcontext())
             {
-                int ParId;
+                
+                int parId;
                 double newParBase;
                 double newParHeight;
                 double newParHypothenuse;
@@ -25,12 +26,12 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                 {
                     Console.Write("\nAnge Id för resultatet av Parallellogramet som ska ändras" +
                         "\nID: ");
-                    if (!int.TryParse(Console.ReadLine(), out ParId))
+                    if (!int.TryParse(Console.ReadLine(), out parId))
                     {
                         Console.WriteLine("\nDu måste ange ett ID för Parallellogramet" +
                             "som ska ändras.");
                     }
-                    else if (ParId == 0)
+                    else if (parId == 0)
                     {
                         Console.Clear();
                         return;
@@ -38,7 +39,7 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                     else
                     {
                         var shapeType = dbEditPar.Shapes
-                            .Where(p => p.ShapeId == ParId)
+                            .Where(p => p.ShapeId == parId)
                             .Select(p => p.ShapeForm)
                             .FirstOrDefault();
                         if (shapeType == "Parallellogram")
@@ -47,14 +48,17 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                         }
                         else
                         {
-                            Console.WriteLine($"Angivet ID: {ParId} existerar inte...");
+                            Console.WriteLine($"Angivet ID: {parId} existerar inte...");
                         }
                     }
                 } while (true);
 
+                Console.Clear();
                 var parToEdit = dbEditPar.Shapes
-                   .Find(ParId);
+                   .Find(parId);
 
+                Console.WriteLine($"Redigerar Parallellogram ID: {parId}..." +
+                    "\n..................................\n");
                 if (parToEdit == null)
                 {
                     Console.WriteLine($"\nParallellogram med id {parToEdit} " +

@@ -48,7 +48,7 @@ namespace ProjectLibrary
             Console.WriteLine("1. Starta Spelet");
             Console.WriteLine("2. Se Resultat");
             Console.WriteLine("3. Ändra resultat");
-            Console.WriteLine("3. Ta bort resultat");
+            Console.WriteLine("4. Ta bort resultat");
             Console.WriteLine("0. Gå tillbaka");
             Console.WriteLine("==================================");
             Console.Write("Val: ");

@@ -21,7 +21,9 @@ namespace ProjectLibrary.Shapes.ShapeGameMethods
                     "\nFör att räkna ut area och omkrest för Rektangeln" +
                     "\nså behöver vi basen och höjden i cm.");
                 Console.WriteLine("Area för Rektangeln räknas: Bas * Höjd" +
-                    "\nOmkretsen för Rektangeln räknas: (bas * 2) + (höjd * 2)");
+                    "\nOmkretsen för Rektangeln räknas: (bas * 2) + (höjd * 2)" +
+                    "\n\nAnnars ange 0 för att gå tillbaka...");
+
                 do
                 {
                     Console.Write("\n\nAnge basen för Rektangeln: ");

@@ -22,7 +22,8 @@ namespace ProjectLibrary.Shapes.ShapeGameMethods
                     "\nFör att räkna ut area och omkrest för Parallollogram" +
                     "\nså behöver vi basen och höjden i cm.");
                 Console.WriteLine("Area för Parallollogram räknas: Bas * Höjd" +
-                    "\nOmkretsen för Parallellogram räknas: (bas * 2) + (hypotenusa * 2)");
+                    "\nOmkretsen för Parallellogram räknas: (bas * 2) + (hypotenusa * 2)" +
+                    "\n\nAnnars ange 0 för att gå tillbaka...");
 
                 do
                 {

@@ -23,7 +23,8 @@ namespace ProjectLibrary.Shapes.ShapeGameMethods
                     "\nFör att räkna ut area och omkrest för Triangeln" +
                     "\nså behöver vi basen och höjden i cm.");
                 Console.WriteLine("Area för Rektangeln räknas: Bas * Höjd / 2" +
-                    "\nOmkretsen för Rektangeln räknas: bas + katet + katet");
+                    "\nOmkretsen för Rektangeln räknas: bas + katet + katet" +
+                    "\n\nAnnars ange 0 för att gå tillbaka...");
 
                 do
                 {

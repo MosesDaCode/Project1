@@ -1,4 +1,5 @@
-﻿using ProjectLibrary.Shapes.ReadShapes;
+﻿using ProjectLibrary.Shapes.DeleteShapes;
+using ProjectLibrary.Shapes.ReadShapes;
 using ProjectLibrary.Shapes.UpdateShapes;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,10 @@ namespace ProjectLibrary.Shapes
                         UpdateShapesMenu.ShowUpdateMenu();
                         break;
                     case "4":
-                        //ta bort resultat
+                        DeleteAnyShape.DeleteShapeResult();
+                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "0":
                         Console.Clear();

@@ -16,6 +16,7 @@ namespace ProjectLibrary.Shapes.UpdateShapes
 
             using (var dbEditRhomb = new Project1Dbcontext())
             {
+                
                 int rhombId;
                 double newRhombBase;
                 double newRhombHeight;
@@ -51,8 +52,12 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                     }
                 } while (true);
 
+                Console.Clear();
                 var RhombToEdit = dbEditRhomb.Shapes
                    .Find(rhombId);
+
+                Console.WriteLine($"Redigerar Romb ID: {rhombId} ..." +
+                    "\n..................................\n");
 
                 if (RhombToEdit == null)
                 {

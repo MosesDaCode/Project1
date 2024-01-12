@@ -17,6 +17,7 @@ namespace ProjectLibrary.Shapes.UpdateShapes
 
             using (var dbEditRec = new Project1Dbcontext())
             {
+                
                 int recId;
                 double newRecBase;
                 double newRecHeight;
@@ -51,10 +52,12 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                         }
                     }
                 } while (true);
-
+                Console.Clear();
                 var recToEdit = dbEditRec.Shapes
                    .Find(recId);
 
+                Console.WriteLine($"Redigerar Rektangel ID: {recId}..." +
+                    "\n..................................\n");
                 if (recToEdit == null)
                 {
                     Console.WriteLine($"\nRektangel med id {recToEdit} " +

@@ -16,6 +16,7 @@ namespace ProjectLibrary.Shapes.UpdateShapes
 
             using (var dbEditTri = new Project1Dbcontext())
             {
+               
                 int triId;
                 double newTriBase;
                 double newTriHeight;
@@ -51,8 +52,12 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                     }
                 } while (true);
 
+                Console.Clear();
                 var triToEdit = dbEditTri.Shapes
                    .Find(triId);
+
+                Console.WriteLine($"Redigerar Triangel ID: {triId}..." +
+                   "\n..................................\n");
 
                 if (triToEdit == null)
                 {

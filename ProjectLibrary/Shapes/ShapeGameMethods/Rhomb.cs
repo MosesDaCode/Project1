@@ -22,7 +22,9 @@ namespace ProjectLibrary.Shapes.ShapeGameMethods
                     "\nFör att räkna ut area och omkrest för Romben" +
                     "\nså behöver vi basen och höjden i cm.");
                 Console.WriteLine("Area för Romben räknas: Bas * Höjd" +
-                    "\nOmkretsen för Romben räknas: bas * 4");
+                    "\nOmkretsen för Romben räknas: bas * 4" +
+                    "\n\nAnnars ange 0 för att gå tillbaka...");
+
 
                 do
                 {
