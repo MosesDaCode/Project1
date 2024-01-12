@@ -16,7 +16,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
             using (var dbParResult = new Project1Dbcontext())
             {
                 var triangleResults = dbParResult.Shapes
-                    .Where(p => p.ShapeForm == "Triangel")
+                    .Where(t => t.ShapeForm == "Triangel")
                     .ToList();
                 if (triangleResults.Any())
                 {
@@ -26,6 +26,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                     foreach (var tri in triangleResults)
                     {
                         Console.WriteLine($"Form: {tri.ShapeForm}" +
+                            $"\nForm Id: {tri.ShapeId}" +
                             $"\nBas: {tri.Base} cm" +
                             $"\nHöjd: {tri.Height} cm" +
                             $"\nKatet 1: {tri.CathetusOne} cm" +

@@ -26,6 +26,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                     foreach (var par in parallelResults)
                     {
                         Console.WriteLine($"Form: {par.ShapeForm}" +
+                            $"\nForm Id: {par.ShapeId}" +
                             $"\nBas: {par.Base} cm" +
                             $"\nHöjd: {par.Height} cm" +
                             $"\nHypotenusa: {par.Hypotenuse} cm" +

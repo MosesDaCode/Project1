@@ -24,6 +24,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                 foreach (var shape in shapeResults)
                     {
                         Console.WriteLine($"Form: {shape.ShapeForm}" +
+                            $"\nForm Id: {shape.ShapeId}" +
                             $"\nBas: {shape.Base} cm" +
                             $"\nHöjd: {shape.Height} cm" +
                             $"\nKatet 1: {shape.CathetusOne} cm" +

@@ -1,4 +1,5 @@
 ﻿using ProjectLibrary.Shapes.ReadShapes;
+using ProjectLibrary.Shapes.UpdateShapes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace ProjectLibrary.Shapes
                         ReadShapesMenu.ReadingShapesMenu();
                         break;
                     case "3":
-                        //Ändra resultat 
+                        UpdateShapesMenu.ShowUpdateMenu();
                         break;
                     case "4":
                         //ta bort resultat

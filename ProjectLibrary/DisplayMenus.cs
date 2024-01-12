@@ -73,5 +73,22 @@ namespace ProjectLibrary
             var readShapesChoice = Console.ReadLine();
             return readShapesChoice;
         }
+        public static string DisplayUpdateShapes()
+        {
+
+            Console.WriteLine("==================================");
+            Console.WriteLine("Vad vill du ändra på?");
+            Console.WriteLine("..................................");
+            Console.WriteLine("1. Ändra på Rektangel");
+            Console.WriteLine("2. Ändra på Parallellogram");
+            Console.WriteLine("3. Ändra på Triangel");
+            Console.WriteLine("4. Ändra på Romb");
+            Console.WriteLine("0. Gå tillbaka");
+            Console.WriteLine("==================================");
+            Console.Write("Val: ");
+
+            var updateShapesChoice = Console.ReadLine();
+            return updateShapesChoice;
+        }
     }
 }

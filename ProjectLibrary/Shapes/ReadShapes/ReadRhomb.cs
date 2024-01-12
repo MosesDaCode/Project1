@@ -26,6 +26,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                     foreach (var rhomb in rhombResults)
                     {
                         Console.WriteLine($"Form: {rhomb.ShapeForm}" +
+                            $"\nForm Id: {rhomb.ShapeId}" +
                             $"\nBas: {rhomb.Base} cm" +
                             $"\nHöjd: {rhomb.Height} cm" +
                             $"\nOmkrets: {rhomb.Circumference} cm" +

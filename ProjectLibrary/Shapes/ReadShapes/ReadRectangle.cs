@@ -26,6 +26,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                     foreach (var rec in rectangleResults)
                     {
                         Console.WriteLine($"Form: {rec.ShapeForm}" +
+                            $"\nForm Id: {rec.ShapeId}" +
                             $"\nBas: {rec.Base} cm" +
                             $"\nHöjd: {rec.Height} cm" +
                             $"\nOmkrets: {rec.Circumference} cm" +
