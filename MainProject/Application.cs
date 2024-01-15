@@ -1,5 +1,7 @@
 ﻿using ProjectLibrary;
+using ProjectLibrary.Build.Data;
 using ProjectLibrary.Build.Service;
+using ProjectLibrary.CalculatorTool;
 using ProjectLibrary.Shapes;
 using System;
 using System.Collections.Generic;
@@ -23,7 +25,7 @@ namespace MainProject
                         UseShapesMenu.ShowShapesMenu();    
                         break;
                     case "2":
-                        //Calculator
+                        DisplayCalculatorMenu.ShowCalcMenu();
                         break;
                     case "3":
                         // RPS

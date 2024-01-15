@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Calculator\" />
     <Folder Include="RockPaperScissor\" />
   </ItemGroup>
 

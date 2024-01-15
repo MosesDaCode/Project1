@@ -8,6 +8,7 @@ namespace ProjectLibrary
 {
     public class DisplayMenus
     {
+        
         public static string DisplayMainMenu()
         {
             Console.WriteLine("==================================");
@@ -23,7 +24,7 @@ namespace ProjectLibrary
             var mainChoice = Console.ReadLine();
             return mainChoice;
         }
-
+        #region ShapesMenu
         public static string DisplayShapesMenu()
         {
             Console.WriteLine("==================================");
@@ -89,6 +90,24 @@ namespace ProjectLibrary
 
             var updateShapesChoice = Console.ReadLine();
             return updateShapesChoice;
+        }
+        #endregion
+
+        public static string DisplayCalcMenu()
+        {
+            Console.WriteLine("==================================");
+            Console.WriteLine("Välkommen till Calculator!");
+            Console.WriteLine("..................................");
+            Console.WriteLine("1. Börja räkna");
+            Console.WriteLine("2. Se Resultat");
+            Console.WriteLine("3. Ändra resultat");
+            Console.WriteLine("4. Ta bort resultat");
+            Console.WriteLine("0. Gå tillbaka");
+            Console.WriteLine("==================================");
+            Console.Write("Val: ");
+
+            var calcCrudChoice = Console.ReadLine();
+            return calcCrudChoice;
         }
     }
 }

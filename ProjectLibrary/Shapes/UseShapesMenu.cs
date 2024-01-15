@@ -50,9 +50,10 @@ namespace ProjectLibrary.Shapes
                         isShapesMenu = false;
                         break;
                     default:
-                        
-
-
+                        Console.WriteLine("Du måste ange ett av valen ovan!!");
+                        Console.WriteLine("Tryck på enter för att fortsätta...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                 }
             }

@@ -19,7 +19,7 @@ namespace ProjectLibrary.Build.Data
         public double SecondNum { get; set; }
 
         [Required]
-        public string Operator { get; set; } = string.Empty;
+        public string Operation { get; set; } = string.Empty;
 
         [Required]
         public double Result { get; set; }

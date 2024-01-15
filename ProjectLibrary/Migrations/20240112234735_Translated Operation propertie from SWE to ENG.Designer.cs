@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectLibrary.Build.Service;
 
@@ -11,9 +12,11 @@ using ProjectLibrary.Build.Service;
 namespace ProjectLibrary.Migrations
 {
     [DbContext(typeof(Project1Dbcontext))]
-    partial class Project1DbcontextModelSnapshot : ModelSnapshot
+    [Migration("20240112234735_Translated Operation propertie from SWE to ENG")]
+    partial class TranslatedOperationpropertiefromSWEtoENG
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
