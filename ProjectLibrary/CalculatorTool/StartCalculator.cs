@@ -97,7 +97,7 @@ namespace ProjectLibrary.CalculatorTool
                             var newCalcForSqrtOne = new Calculator()
                             {
                                 FirstNum = firstNum,
-                                Operation = operation,
+                                Operation = "√",
                                 Result = result,
                                 CalculationDate = DateOnly.FromDateTime(DateTime.Now)
                             };
@@ -105,7 +105,7 @@ namespace ProjectLibrary.CalculatorTool
                             dbcalc.SaveChanges();
                             Console.WriteLine("\nResultat för uträkningen" +
                            "\n......................................." +
-                           $"\nRoten ur {firstNum} = {result:F2} ");
+                           $"\nsqrt {firstNum} = {result:F2} ");
                             break;
                         }
                         else if (operation.ToUpper() == "R2")
@@ -113,7 +113,7 @@ namespace ProjectLibrary.CalculatorTool
                             var newcalcForSqrtTwo = new Calculator()
                             {
                                 SecondNum = secondNum,
-                                Operation = operation,
+                                Operation = "√",
                                 Result = result,
                                 CalculationDate = DateOnly.FromDateTime(DateTime.Now)
                             };
@@ -121,7 +121,7 @@ namespace ProjectLibrary.CalculatorTool
                             dbcalc.SaveChanges();
                             Console.WriteLine("\nResultat för uträkningen" +
                           "\n......................................." +
-                          $"\nRoten ur {secondNum:F0} = {result:F2} ");
+                          $"\nsqrt {secondNum:F0} = {result:F2} ");
                             break;
                         }
                         else if (operation.ToUpper() == "%")
@@ -197,10 +197,6 @@ namespace ProjectLibrary.CalculatorTool
                     return num1 * num2;
                 case "/":
                     return num1 / num2;
-                case "R1":
-                    return Math.Sqrt(num1);
-                case "R2":
-                    return Math.Sqrt(num2);
                 case "%":
                     return num1 % num2;
                 case "0":
