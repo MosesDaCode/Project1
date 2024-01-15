@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace ProjectLibrary.CalculatorTool
+namespace ProjectLibrary.CalculatorTool.StartingCalculator
 {
     public class StartCalculator
     {
@@ -105,7 +105,7 @@ namespace ProjectLibrary.CalculatorTool
                             dbcalc.SaveChanges();
                             Console.WriteLine("\nResultat för uträkningen" +
                            "\n......................................." +
-                           $"\nsqrt {firstNum} = {result:F2} ");
+                           $"\nsqrt {firstNum} = {result:F2}");
                             break;
                         }
                         else if (operation.ToUpper() == "R2")

@@ -1,4 +1,5 @@
-﻿using ProjectLibrary.Shapes.DeleteShapes;
+﻿using ProjectLibrary.Shapes.CreateShapes;
+using ProjectLibrary.Shapes.DeleteShapes;
 using ProjectLibrary.Shapes.ReadShapes;
 using ProjectLibrary.Shapes.UpdateShapes;
 using System;
@@ -31,7 +32,7 @@ namespace ProjectLibrary.Shapes
                 switch (DisplayMenus.DisplayShapesCrud())
                 {
                     case "1":
-                        StartShapeGame.StartShaping();
+                        CreateShapeGameMenu.StartShaping();
                         break;
                     case "2":
                         ReadShapesMenu.ReadingShapesMenu();

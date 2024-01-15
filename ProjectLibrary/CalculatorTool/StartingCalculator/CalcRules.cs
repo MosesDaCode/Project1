@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectLibrary.CalculatorTool
+namespace ProjectLibrary.CalculatorTool.StartingCalculator
 {
     public class CalcRules
     {

@@ -8,7 +8,7 @@ namespace ProjectLibrary
 {
     public class DisplayMenus
     {
-        
+        #region MainMenu
         public static string DisplayMainMenu()
         {
             Console.WriteLine("==================================");
@@ -24,6 +24,7 @@ namespace ProjectLibrary
             var mainChoice = Console.ReadLine();
             return mainChoice;
         }
+        #endregion
         #region ShapesMenu
         public static string DisplayShapesMenu()
         {
@@ -92,7 +93,7 @@ namespace ProjectLibrary
             return updateShapesChoice;
         }
         #endregion
-
+        #region CalcMenu
         public static string DisplayCalcMenu()
         {
             Console.WriteLine("==================================");
@@ -109,5 +110,7 @@ namespace ProjectLibrary
             var calcCrudChoice = Console.ReadLine();
             return calcCrudChoice;
         }
+
+        #endregion
     }
 }

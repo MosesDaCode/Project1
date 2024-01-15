@@ -1,4 +1,6 @@
-﻿using ProjectLibrary.CalculatorTool.ReadCalculatorResults;
+﻿using ProjectLibrary.CalculatorTool.CreateCalculator;
+using ProjectLibrary.CalculatorTool.ReadCalculatorResults;
+using ProjectLibrary.CalculatorTool.UpdateCalculator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +33,10 @@ namespace ProjectLibrary.CalculatorTool
                         Console.Clear();
                         break;
                     case "3":
-                        //Ändra resultat
+                        UpdateCalcResults.UpdatingCalcResults();
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "4":
                         //Ta bort resultat

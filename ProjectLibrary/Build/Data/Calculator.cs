@@ -27,5 +27,6 @@ namespace ProjectLibrary.Build.Data
         [Required]
         public DateOnly CalculationDate { get; set; }
 
+        public DateOnly EditDate { get; set; }
     }
 }

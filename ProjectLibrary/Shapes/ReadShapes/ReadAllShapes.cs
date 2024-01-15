@@ -12,7 +12,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
         public static void ReadingAllShapes()
         {
             Console.Clear();
-            
+
             using (var dbAllShapesRead = new Project1Dbcontext())
             {
                 var shapeResults = dbAllShapesRead.Shapes.ToList();
@@ -21,7 +21,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                     Console.WriteLine("Visar alla resultat..." +
                 "\n-------------------------------------------");
 
-                foreach (var shape in shapeResults)
+                    foreach (var shape in shapeResults)
                     {
                         Console.WriteLine($"Form: {shape.ShapeForm}" +
                             $"\nForm Id: {shape.ShapeId}" +
@@ -36,7 +36,7 @@ namespace ProjectLibrary.Shapes.ReadShapes
                         Console.WriteLine("-------------------------------------------");
                     }
                 }
-                else 
+                else
                 {
                     Console.WriteLine("Inga resultat hittades...");
                 }

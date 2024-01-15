@@ -4,51 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectLibrary.Shapes.ReadShapes
+namespace ProjectLibrary.Shapes.CreateShapes
 {
-    public class ReadShapesMenu
+    public class CreateShapeGameMenu
     {
-        public static void ReadingShapesMenu()
+        public static void StartShaping()
         {
             Console.Clear();
-            bool isReadingshapes = true;
-            while (isReadingshapes)
+            bool isShapesMenu = true;
+            while (isShapesMenu)
             {
-                switch (DisplayMenus.DisplayReadShapes())
+                switch (DisplayMenus.DisplayShapesMenu())
                 {
                     case "1":
-                        ReadAllShapes.ReadingAllShapes();
-                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Rectangle.RectangleChoice();
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case "2":
-                        ReadRectangle.ReadingRectangle();
-                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Parallelogram.ParallelogramChoice();
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case "3":
-                        ReadParallelogram.ReadingParallelogram();
-                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Triangle.TriangleChoice();
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case "4":
-                        ReadTriangle.ReadingTriangle();
-                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
-                        Console.ReadKey();
-                        Console.Clear();
-                        break;
-                    case "5":
-                        ReadRhomb.ReadingRhomb();
-                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Rhomb.RhombChoice();
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case "0":
                         Console.Clear();
-                        isReadingshapes = false;
+                        isShapesMenu = false;
                         break;
                     default:
                         Console.WriteLine("Du måste ange ett av valen ovan!!");
