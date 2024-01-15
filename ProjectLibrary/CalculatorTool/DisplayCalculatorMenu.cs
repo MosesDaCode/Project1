@@ -1,4 +1,5 @@
 ﻿using ProjectLibrary.CalculatorTool.CreateCalculator;
+using ProjectLibrary.CalculatorTool.DeleteCalc;
 using ProjectLibrary.CalculatorTool.ReadCalculatorResults;
 using ProjectLibrary.CalculatorTool.UpdateCalculator;
 using System;
@@ -39,7 +40,10 @@ namespace ProjectLibrary.CalculatorTool
                         Console.Clear();
                         break;
                     case "4":
-                        //Ta bort resultat
+                        DeleteCalculatorResult.DeletingCalcResult();
+                        Console.WriteLine("\nTryck på enter för att fortsätta...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "0":
                         Console.Clear();
