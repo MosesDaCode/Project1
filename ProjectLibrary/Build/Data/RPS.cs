@@ -10,18 +10,21 @@ namespace ProjectLibrary.Build.Data
     public class RPS
     {
         [Key]
-        public int RockPaperScissorId { get; set; }
+        public int RpsId { get; set; }
 
         [Required]
-        public string PlayerMove {  get; set; } = string.Empty;
+        public string PlayerMove { get; set; } = string.Empty;
 
         [Required]
-        public string ComputerMove {  get; set; } = string.Empty;
+        public string ComputerMove { get; set; } = string.Empty;
 
         [Required]
         public string Result { get; set; } = string.Empty;
 
         [Required]
         public DateOnly GameDate { get; set; }
+
+        [Required]
+        public decimal AvgWinRate { get; set; }
     }
 }

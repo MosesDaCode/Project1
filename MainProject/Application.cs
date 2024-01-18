@@ -2,6 +2,7 @@
 using ProjectLibrary.Build.Data;
 using ProjectLibrary.Build.Service;
 using ProjectLibrary.CalculatorTool;
+using ProjectLibrary.RockPaperScissor;
 using ProjectLibrary.Shapes;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace MainProject
                         DisplayCalculatorMenu.ShowCalcMenu();
                         break;
                     case "3":
-                        // RPS
+                        DisplayRpsMenuGame.ShowRpsMenu();
                         break;
                     case "0":
                         Environment.Exit(0);

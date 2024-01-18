@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectLibrary.Build.Service;
 
@@ -11,9 +12,11 @@ using ProjectLibrary.Build.Service;
 namespace ProjectLibrary.Migrations
 {
     [DbContext(typeof(Project1Dbcontext))]
-    partial class Project1DbcontextModelSnapshot : ModelSnapshot
+    [Migration("20240118132716_Changed propertie AvgWinRate from double to decimal")]
+    partial class ChangedpropertieAvgWinRatefromdoubletodecimal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,12 +72,18 @@ namespace ProjectLibrary.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ComputerScore")
+                        .HasColumnType("int");
+
                     b.Property<DateOnly>("GameDate")
                         .HasColumnType("date");
 
                     b.Property<string>("PlayerMove")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PlayerScore")
+                        .HasColumnType("int");
 
                     b.Property<string>("Result")
                         .IsRequired()

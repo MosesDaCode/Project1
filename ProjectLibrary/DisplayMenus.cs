@@ -112,5 +112,22 @@ namespace ProjectLibrary
         }
 
         #endregion
+        #region RockPaperScissor
+        public static string DisplayRpsMenu()
+        {
+            Console.WriteLine("==================================");
+            Console.WriteLine("Välkommen till Sten Sax Påse!");
+            Console.WriteLine("..................................");
+            Console.WriteLine("1. Starta spelet!");
+            Console.WriteLine("2. Se resultat");
+            Console.WriteLine("3. Se regler");
+            Console.WriteLine("0. Gå tillbaka");
+            Console.WriteLine("==================================");
+            Console.Write("Val: ");
+
+            var rpsChoice = Console.ReadLine();
+            return rpsChoice;
+        }
+        #endregion
     }
 }

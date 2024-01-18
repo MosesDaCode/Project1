@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectLibrary.Build.Service;
 
@@ -11,9 +12,11 @@ using ProjectLibrary.Build.Service;
 namespace ProjectLibrary.Migrations
 {
     [DbContext(typeof(Project1Dbcontext))]
-    partial class Project1DbcontextModelSnapshot : ModelSnapshot
+    [Migration("20240116150556_Added properties for player score and computer score")]
+    partial class Addedpropertiesforplayerscoreandcomputerscore
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,18 +59,18 @@ namespace ProjectLibrary.Migrations
 
             modelBuilder.Entity("ProjectLibrary.Build.Data.RPS", b =>
                 {
-                    b.Property<int>("RpsId")
+                    b.Property<int>("RockPaperScissorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RpsId"));
-
-                    b.Property<decimal>("AvgWinRate")
-                        .HasColumnType("decimal(18,2)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RockPaperScissorId"));
 
                     b.Property<string>("ComputerMove")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ComputerScore")
+                        .HasColumnType("int");
 
                     b.Property<DateOnly>("GameDate")
                         .HasColumnType("date");
@@ -76,11 +79,14 @@ namespace ProjectLibrary.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PlayerScore")
+                        .HasColumnType("int");
+
                     b.Property<string>("Result")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RpsId");
+                    b.HasKey("RockPaperScissorId");
 
                     b.ToTable("RockPaperScissor");
                 });
