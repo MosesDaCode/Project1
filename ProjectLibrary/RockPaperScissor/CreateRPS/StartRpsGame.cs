@@ -45,10 +45,12 @@ namespace ProjectLibrary.RockPaperScissor.CreateRPS
                         userChoice = Console.ReadLine();
                         computerChoice = computerRandChoice.Next(3);
                         
-                        decimal newAvgWinRate = totalGames > 0 ? (decimal)totalWins / (decimal)totalGames : 0;
+                        decimal newAvgWinRate = 0;
 
                         if (computerChoice == 0)
                         {
+                            totalGames++;
+                            newAvgWinRate = totalGames > 0 ? (decimal)totalWins / (decimal)totalGames : 0;
 
                             if (userChoice.ToUpper() == "R")
                             {
@@ -117,6 +119,9 @@ namespace ProjectLibrary.RockPaperScissor.CreateRPS
                         }
                         else if (computerChoice == 1)
                         {
+                            totalGames++;
+                            newAvgWinRate = totalGames > 0 ? (decimal)totalWins / (decimal)totalGames : 0;
+
                             if (userChoice.ToUpper() == "R")
                             {
                                 Console.WriteLine("\nDitt val: Sten" +
@@ -186,7 +191,9 @@ namespace ProjectLibrary.RockPaperScissor.CreateRPS
                         }
                         else if (computerChoice == 2)
                         {
-
+                            totalGames++;
+                            totalWins++;
+                            newAvgWinRate = totalGames > 0 ? (decimal)totalWins / (decimal)totalGames : 1;
 
                             if (userChoice.ToUpper() == "R")
                             {
@@ -201,7 +208,6 @@ namespace ProjectLibrary.RockPaperScissor.CreateRPS
                                     GameDate = DateOnly.FromDateTime(DateTime.Now),
                                     AvgWinRate = newAvgWinRate
                                 };
-                                totalWins++;
                                 dbRps.Add(newScoreRockWin);
                                 dbRps.SaveChanges();
                                 break;
@@ -219,7 +225,6 @@ namespace ProjectLibrary.RockPaperScissor.CreateRPS
                                     GameDate = DateOnly.FromDateTime(DateTime.Now),
                                     AvgWinRate = newAvgWinRate
                                 };
-                                totalWins++;
                                 dbRps.Add(newScoreScissorWin);
                                 dbRps.SaveChanges();
                                 break;
@@ -237,7 +242,6 @@ namespace ProjectLibrary.RockPaperScissor.CreateRPS
                                     GameDate = DateOnly.FromDateTime(DateTime.Now),
                                     AvgWinRate = newAvgWinRate
                                 };
-                                totalWins++;
                                 dbRps.Add(newScorePaperWin);
                                 dbRps.SaveChanges();
                                 break;
