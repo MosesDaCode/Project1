@@ -30,6 +30,8 @@ namespace MainProject
                         break;
                     case "3":
                         DisplayRpsMenuGame.ShowRpsMenu();
+
+
                         break;
                     case "0":
                         Environment.Exit(0);

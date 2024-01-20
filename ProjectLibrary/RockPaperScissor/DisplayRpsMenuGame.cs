@@ -14,6 +14,9 @@ namespace ProjectLibrary.RockPaperScissor
         {
             Console.Clear();
             RpsRules.RulesForRps();
+            Console.WriteLine("\nTryck på enter för att för att börja...");
+            Console.ReadKey();
+            Console.Clear();
             bool isRpsGame = true;
             while (isRpsGame)
             {
@@ -33,6 +36,9 @@ namespace ProjectLibrary.RockPaperScissor
                         break;
                     case "3":
                         RpsRules.RulesForRps();
+                        Console.WriteLine("\nTryck på enter för att gå tillbaka...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "0":
                         Console.Clear();
