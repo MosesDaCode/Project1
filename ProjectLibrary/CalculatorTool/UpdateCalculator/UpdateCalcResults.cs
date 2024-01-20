@@ -18,10 +18,10 @@ namespace ProjectLibrary.CalculatorTool.UpdateCalculator
             using (var dbUpdateCalcResult = new Project1Dbcontext())
             {
                 int calcId;
-                double newFirstNum;
-                double newSecondNum;
-                double result;
-                string operation;
+                double newFirstNum = 0;
+                double newSecondNum = 0;
+                double result = 0;
+                string operation = null;
 
                 do
                 {
@@ -48,30 +48,44 @@ namespace ProjectLibrary.CalculatorTool.UpdateCalculator
                            .Find(calcId);
                 do
                 {
-                    Console.Write("Ange ett nytt första nummer att ändra till!" +
-                        "\nFörsta nummret: ");
-                    if (!double.TryParse(Console.ReadLine(), out newFirstNum))
+                    if (calcRes != null)
                     {
-                        Console.WriteLine("\nDu måste ange det första nummret" +
-                            "i form av siffror!!");
-                    }
-                    else if (newFirstNum == 0)
-                    {
-                        Console.Clear();
-                        return;
+                        do
+                        {
+
+                            Console.Write("Ange ett nytt första nummer att ändra till!" +
+                                "\nFörsta nummret: ");
+                            if (!double.TryParse(Console.ReadLine(), out newFirstNum))
+                            {
+                                Console.WriteLine("\nDu måste ange det första nummret" +
+                                    "i form av siffror!!");
+                            }
+                            else if (newFirstNum == 0)
+                            {
+                                Console.Clear();
+                                return;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        } while (true);
+                        break;
                     }
                     else
                     {
-                        break;
+                        Console.WriteLine($"ID: {calcId} Existerar inte");
+                        return;
                     }
                 } while (true);
+
 
                 do
                 {
                     Console.Write("Ange ett nytt andra nummer att ändra till!" +
                         $"\nFörsta nummret: {newFirstNum}" +
                         $"\nAndra nummret: ");
-                    if (!double.TryParse(Console.ReadLine(),out newSecondNum))
+                    if (!double.TryParse(Console.ReadLine(), out newSecondNum))
                     {
                         Console.WriteLine("\nDu måste ange det första nummret" +
                             "i form av siffror!!");
@@ -153,7 +167,7 @@ namespace ProjectLibrary.CalculatorTool.UpdateCalculator
                             calcRes.SecondNum = newSecondNum;
                             calcRes.Operation = operation;
                             calcRes.Result = result;
-                            calcRes.EditDate = DateOnly.FromDateTime( DateTime.Now );
+                            calcRes.EditDate = DateOnly.FromDateTime(DateTime.Now);
                             dbUpdateCalcResult.SaveChanges();
                             Console.WriteLine("\nResultat för uträkningen" +
                                 "\n......................................." +
@@ -183,5 +197,5 @@ namespace ProjectLibrary.CalculatorTool.UpdateCalculator
     }
 
 
-    
+
 }

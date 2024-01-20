@@ -126,20 +126,31 @@ namespace ProjectLibrary.CalculatorTool.CreateCalculator
                         }
                         else if (operation.ToUpper() == "%")
                         {
-                            var newcalcForModu = new Calculator()
+                            if (firstNum < secondNum)
                             {
-                                FirstNum = firstNum,
-                                SecondNum = secondNum,
-                                Operation = operation,
-                                Result = result,
-                                CalculationDate = DateOnly.FromDateTime(DateTime.Now)
-                            };
-                            dbcalc.Add(newcalcForModu);
-                            dbcalc.SaveChanges();
-                            Console.WriteLine("\nResultat för uträkningen" +
-                          "\n......................................." +
-                          $"\nRest av  {firstNum:F0} / {secondNum:F0} = {result:F0} ");
-                            break;
+                                Console.WriteLine("\nDu kan inte räkna Rest!!!" +
+                                    "\nDet första angivna nummret är större än det andra angivna nummret!!" +
+                                    "\nGör om gör rätt...");
+                                break;
+                            }
+                            else
+                            {
+                                var newcalcForModu = new Calculator()
+                                {
+                                    FirstNum = firstNum,
+                                    SecondNum = secondNum,
+                                    Operation = operation,
+                                    Result = result,
+                                    CalculationDate = DateOnly.FromDateTime(DateTime.Now)
+                                };
+                                dbcalc.Add(newcalcForModu);
+                                dbcalc.SaveChanges();
+                                Console.WriteLine("\nResultat för uträkningen" +
+                              "\n......................................." +
+                              $"\nRest av  {firstNum:F0} / {secondNum:F0} = {result:F0} ");
+                                break;
+                            }
+
                         }
                         else
                         {

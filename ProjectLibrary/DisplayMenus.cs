@@ -14,9 +14,9 @@ namespace ProjectLibrary
             Console.WriteLine("==================================");
             Console.WriteLine("Vilket program vill du använda?");
             Console.WriteLine("..................................");
-            Console.WriteLine("1. Shapes (Spel)");
-            Console.WriteLine("2. Calculator (Miniräknare)");
-            Console.WriteLine("3. Sten Sax Påse (Spel)");
+            Console.WriteLine("1. Shapes");
+            Console.WriteLine("2. Calculator");
+            Console.WriteLine("3. Sten Sax Påse");
             Console.WriteLine("0. Avsluta program!");
             Console.WriteLine("==================================");
             Console.Write("Val: ");

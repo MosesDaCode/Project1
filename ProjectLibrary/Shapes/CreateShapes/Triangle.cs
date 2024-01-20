@@ -66,7 +66,7 @@ namespace ProjectLibrary.Shapes.CreateShapes
 
                 do
                 {
-                    Console.Write("\n\nAnge första kateten för Triangeln: ");
+                    Console.Write("Ange första kateten för Triangeln: ");
                     if (!double.TryParse(Console.ReadLine(), out triCatOne))
                     {
                         Console.WriteLine("\nDu måste ange ett nummer för den första kateten av Triangeln!");
@@ -85,7 +85,7 @@ namespace ProjectLibrary.Shapes.CreateShapes
 
                 do
                 {
-                    Console.Write("\n\nAnge första kateten för Triangeln: ");
+                    Console.Write("Ange andra kateten för Triangeln: ");
                     if (!double.TryParse(Console.ReadLine(), out triCatTwo))
                     {
                         Console.WriteLine("\nDu måste ange ett nummer för den andra kateten av Triangeln!");

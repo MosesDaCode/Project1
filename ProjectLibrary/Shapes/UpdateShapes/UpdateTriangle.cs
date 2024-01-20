@@ -20,6 +20,8 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                 int triId;
                 double newTriBase;
                 double newTriHeight;
+                double newCathetusOne;
+                double newCathetusTwo;
 
                 do
                 {
@@ -103,16 +105,59 @@ namespace ProjectLibrary.Shapes.UpdateShapes
                     }
                 } while (true);
 
+                do
+                {
+                    Console.Write("Ange en ny första katet för Rektangeln: ");
+                    if (!double.TryParse(Console.ReadLine(), out newCathetusOne))
+                    {
+                        Console.WriteLine("\nDu måste ange en ny höjd i form av siffror!");
+                    }
+                    else if (newCathetusOne == 0)
+                    {
+                        Console.Clear();
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nBra jobbat!!!");
+                        break;
+                    }
+                } while (true);
+
+                do
+                {
+                    Console.Write("Ange en ny andra katet för Rektangeln: ");
+                    if (!double.TryParse(Console.ReadLine(), out newCathetusTwo))
+                    {
+                        Console.WriteLine("\nDu måste ange en ny höjd i form av siffror!");
+                    }
+                    else if (newCathetusTwo == 0)
+                    {
+                        Console.Clear();
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nBra jobbat!!!");
+                        break;
+                    }
+                } while (true);
+
+
                 var newTriArea = (newTriBase * newTriHeight) / 2;
-                var newTriCircumference = newTriBase + newTriBase + newTriBase;
+                var newTriCircumference = newTriBase + newCathetusOne + newCathetusTwo;
 
                 Console.WriteLine($"\nDu har angett nya värden" +
                     $"\nNy Bas: {newTriBase:F2} cm" +
-                    $"\nNy Höjd: {newTriHeight:F2} cm");
+                    $"\nNy Höjd: {newTriHeight:F2} cm" +
+                    $"\nNy Katet 1: {newCathetusOne} cm" +
+                    $"\nNy Katet 2: {newCathetusTwo} cm");
 
 
                 triToEdit.Base = newTriBase;
                 triToEdit.Height = newTriHeight;
+                triToEdit.CathetusOne = newCathetusOne;
+                triToEdit.CathetusTwo = newCathetusTwo;
                 triToEdit.Area = newTriArea;
                 triToEdit.Circumference = newTriCircumference;
                 triToEdit.EditDate = DateOnly.FromDateTime(DateTime.Now);
